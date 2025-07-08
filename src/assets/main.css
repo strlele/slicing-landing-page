@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@theme {
+    /* Font */
+    --font-sans: 'Inter', sans-serif;
+
+    /* Color*/
+
+      /* Normal */
+    --color-informative: #0065FF;
+    --color-informative-light: #E6F0FF;
+    --color-neutral: #101828;
+    --color-neutral-700: #344054;
+    --color-neutral-100: #F2F4F7;
+    --color-main-brand-900: #0065FF;
+
+    /* Dark */
+    --color-succes: #0B7041;
+}
+
+@layer utilities {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 10s linear infinite;
+  }
+
+  .shadow-custom {
+    box-shadow:
+      -2px 8px 19px 0px #0000001A,
+      -9px 33px 34px 0px #00000017,
+      -19px 74px 46px 0px #0000000D,
+      -34px 132px 54px 0px #00000003,
+      -54px 206px 60px 0px #00000000;
+  }
+
+}
+
