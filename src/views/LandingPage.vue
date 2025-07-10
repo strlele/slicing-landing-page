@@ -123,8 +123,8 @@
 
   <!-- Section About -->
   <section class="w-full px-30 py-25 bg-white">
-    <div class="flex flex-row justify-between mb-12">
-      <div class="flex flex-col gap-4 md:w-1/2">
+    <div class="flex flex-row justify-between mb-12 gap-6">
+      <div class="flex flex-col gap-4">
         <p class="text-sm md:text-base text-gray-500 font-medium tracking-wide">Selayang Pandang</p>
 
         <!-- Foto -->
@@ -133,7 +133,7 @@
       </div>
 
       <!-- Right Side: Heading & Text -->
-      <div class="flex flex-col justify-center items-start md:w-1/2">
+      <div class="flex flex-col justify-center items-start flex-1">
         <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-snug">
           Utlubil Ilma Minal Mahdi <br />
           Ilallahdi
@@ -230,7 +230,7 @@
   <section class="bg-[#051244] px-4 sm:px-6 md:px-8 lg:px-[120px] py-[100px] text-white">
     <h2 class="text-lg font-semibold mb-6">Agenda DIMSA</h2>
 
-    <div class="grid grid-cols-[1fr_2fr] gap-[60px] max-w-[1200px] mx-auto items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[60px] max-w-[1200px] mx-auto items-center">
       <!-- event -->
       <div class="flex flex-col justify-center gap-4 mt-[173px]">
         <h3 class="text-2xl font-bold leading-snug">Dimsa Fantastic Show #4</h3>
@@ -250,7 +250,7 @@
       </div>
 
       <!-- Image -->
-      <div>
+      <div class="lg:col-span-2">
         <img src="@/assets/img/event1.jpg" alt="Dimsa Fantastic Show Banner"
           class="w-full h-auto rounded-xl shadow-lg object-cover" />
       </div>
@@ -335,7 +335,7 @@
     <!-- Cards Container -->
     <div class="flex md:flex-row gap-8">
       <!-- Card 1 -->
-      <div class="border border-gray-200 rounded-3xl p-[56px] flex flex-col justify-between h-full min-h-[376px]">
+      <div class="border border-gray-200 rounded-3xl p-[56px] flex flex-col justify-between gap-4 h-full">
         <blockquote class="text-gray-700 leading-relaxed mb-8">
           “Keberadaan DIMSA mengubah pandangan saya tentang kepemimpinan dan kerjasama. Kegiatan dan
           teman-teman di sini mendukung perkembangan diri saya, membuat saya siap menghad...”
@@ -349,7 +349,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="border border-gray-200 rounded-3xl p-[56px] flex flex-col justify-between h-full min-h-[376px]">
+      <div class="border border-gray-200 rounded-3xl p-[56px] flex flex-col justify-between gap-4 h-full">
         <blockquote class="text-gray-700 leading-relaxed mb-8">
           “DIMSA memberikan pengalaman luar biasa dalam berorganisasi dan kolaborasi. Saya merasa
           lebih siap menghadapi tantangan di luar sekolah. Terima kasih, DIMSA!”
@@ -371,7 +371,7 @@
       <div class="grid lg:grid-cols-2 gap-6 md:h-[700px]">
         <!-- PMB -->
         <div class="relative bg-green-700 text-white rounded-xl p-6 overflow-hidden min-h-[300px]">
-          <!-- Badge Kiri -->
+          <!-- MA -->
           <div class="absolute -left-44 top-[86px] flex gap-[23px]">
             <div class="flex justify-center items-center bg-white text-[#091E6F] text-[28px] font-semibold py-5 px-[40px] rounded-[10px]">
               <p class="text-center">MA Darul Ihsan Muhammadiyah</p>
@@ -381,7 +381,7 @@
             </div>
           </div>
 
-          <!-- Badge Kanan -->
+          <!-- SMP -->
           <div class="absolute -right-44 top-[204px] flex flex-row-reverse gap-[23px]">
             <div
               class="flex justify-center items-center bg-white text-[#091E6F] text-[28px] font-semibold py-5 px-[40px] rounded-[10px]">
@@ -429,7 +429,7 @@
       <div
         class="bg-gradient-to-tr from-[#FCD13F] to-[#FBA13A] rounded-[20px] pl-[80px] pr-[40px] relative flex items-center justify-between overflow-hidden min-h-[440px]">
         <!-- KIRI -->
-        <div class="max-w-[550px] text-left">
+        <div class="flex flex-col items-start gap-4 max-w-[550px] text-left">
           <img src="@/assets/icons/lazismu.svg" alt="Lazismu" class="h-8 mb-7" />
 
           <h3 class="text-[32px] font-bold leading-snug mb-4">
@@ -588,7 +588,6 @@
 </template>
 
 <script setup>
-// Fungsi scroll ke atas
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
