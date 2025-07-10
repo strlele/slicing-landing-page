@@ -123,17 +123,17 @@
 
   <!-- Section About -->
   <section class="w-full px-30 py-25 bg-white">
-    <div class="flex flex-row justify-between mb-12 gap-6">
-      <div class="flex flex-col gap-4">
+    <div class="flex flex-row justify-between mb-10 gap-[120px]">
+      <div class="flex flex-col justify-between gap-4">
         <p class="text-sm md:text-base text-gray-500 font-medium tracking-wide">Selayang Pandang</p>
 
         <!-- Foto -->
         <img src="@/assets/img/Foto-Berita193.png" alt="Ustadz"
-          class="w-full max-w-[400px] rounded-md mt-[196px] object-cover" />
+          class="max-w-[400px] rounded-md object-cover" />
       </div>
 
       <!-- Right Side: Heading & Text -->
-      <div class="flex flex-col justify-center items-start flex-1">
+      <div class="flex flex-col items-start flex-1">
         <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-snug">
           Utlubil Ilma Minal Mahdi <br />
           Ilallahdi
@@ -157,8 +157,8 @@
       </div>
     </div>
 
-    <!-- Banner Image With Centered SVG -->
-    <div class="w-full relative">
+    <!-- Video -->
+    <div class="w-full relative pt-[80px]">
       <!-- Banner Background Image -->
       <img src="@/assets/img/cover.jpg" alt="Banner Dimsa" class="w-full rounded-md object-cover" />
 
@@ -266,11 +266,11 @@
 
     <div class="flex flex-col lg:flex-row gap-[40px]">
       <!-- Berita Utama -->
-      <div class="w-full lg:w-[720px] h-[684px] cursor-pointer">
+      <div class="flex flex-col justify-between w-full flex-1 cursor-pointer">
         <img src="@/assets/img/image-card.png" alt="Kabar DIMSA"
           class="w-full h-[526px] object-cover rounded-2xl mb-4" />
-        <div class="flex flex-col gap-6">
           <p class="text-sm text-gray-500">Kabar Dimsa • 05 Jan, 2024</p>
+        <div class="flex flex-col gap-6">
           <h3 class="text-2xl font-bold text-[#080E1E] leading-snug">
             MA DIMSA Mengirim 15 Santri untuk Program Mobilitas Pelajar Internasional ke Singapura
             ...
