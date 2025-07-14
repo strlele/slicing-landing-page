@@ -1,22 +1,23 @@
 <template>
+  <div class="overflow-hidden">
   <!-- HEADER -->
   <header class="absolute top-0 left-0 right-0 z-10">
-    <nav class="flex justify-between items-center bg-transparent">
+    <nav class="flex justify-between bg-transparent">
       <!-- Logo -->
-      <div class="flex items-center px-[80px] pt-[29px]">
-        <img src="@/assets/img/logo.png" alt="Logo" class="w-[103px] h-[56px] object-contain" />
+      <div class="flex items-center p-5 pb-2 md:px-[80px] md:pt-[29px]">
+        <img src="@/assets/img/logo.png" alt="Logo" class="w-[67px] h-full md:w-[103px] md:h-[56px] object-contain" />
       </div>
 
       <!-- Menu -->
-      <div class="flex items-center">
-        <button class="bg-informative text-white px-[40px] py-[29px] rounded-bl-lg">
+      <div class="flex">
+        <button class="bg-informative text-white px-[40px] py-[29px] rounded-bl-lg hidden md:block">
           PSB Online
         </button>
-        <button class="bg-neutral text-white pl-[40px] pr-[80px] py-[29px] flex items-center">
-          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button @click="isSidebarOpen = true" class="bg-neutral text-white p-6 pb-4 md:pl-[40px] md:pr-[80px] md:py-[29px] rounded-bl-lg md:rounded-none flex items-center">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          Menu
+          <span class="hidden md:block"> Menu</span>
         </button>
       </div>
     </nav>
@@ -25,23 +26,23 @@
   <!-- HERO SECTION -->
   <section
     class="relative min-h-screen pb-[80px] bg-center bg-cover bg-no-repeat bg-[url('/src/assets/img/banner.jpg')] bg-blend-darken bg-black/10">
-    <div class="mx-[80px] flex flex-col gap-y-8 text-white">
+    <div class="mx-5 md:mx-[80px] flex flex-col gap-y-8 text-white">
       <!-- Teks Hero -->
       <div class="mt-[362px] mb-8">
-        <h1 class="text-[44px] font-semibold leading-snug">
-          Beriman, Unggul dalam Prestasi,<br />
+        <h1 class="text-[32px] md:text-[44px] font-bold md:font-semibold md:w-1/2 md:leading-snug leading-[120%]">
+          Beriman, Unggul dalam Prestasi,
           dan Berakhlaqul Karimah
         </h1>
       </div>
 
       <div class="flex flex-row justify-between items-end">
-        <div class="w-[560px] flex bg-[#00000040] backdrop-blur-[16px] rounded-2xl px-6 py-[62px] gap-6 shadow-lg">
+        <!-- Card Content -->
+        <div class="w-full md:w-[560px] hidden md:flex bg-[#00000040] backdrop-blur-[16px] rounded-2xl px-6 py-[62px] gap-6 shadow-lg">
           <!-- Image -->
           <div class="w-[200px] h-[160px] rounded-lg overflow-hidden shadow-md flex-none">
             <img src="@/assets/img/image-card.png" alt="Card Image" class="w-full h-full object-cover" />
           </div>
 
-          <!-- Card Content -->
           <div class="flex flex-col justify-center gap-[10px]">
             <button class="bg-informative-light text-informative w-[89px] h-[26px] rounded-[4px] font-medium text-xs">
               Kabar Dimsa
@@ -60,7 +61,7 @@
         </div>
 
         <!-- Floating Icons -->
-        <div class="flex flex-col gap-4 mb-2 mr-4">
+        <div class="flex md:flex-col flex-row gap-4 mb-2 mr-4">
           <!-- Facebook -->
           <a href="https://facebook.com" target="_blank" aria-label="Facebook"
             class="w-[44px] h-[44px] flex items-center justify-center border border-white rounded-full text-white hover:bg-white/10 transition">
@@ -121,15 +122,32 @@
     </div>
   </section>
 
+  <!-- card section mobile -->
+   <section class="w-full px-5 py-10 bg-black md:hidden">
+    <div class="flex flex-col gap-6">
+      <img src="@/assets/img/image-card.png" alt="Card Image" class="w-full h-full rounded-2xl object-cover" />
+      <div class="text-white flex flex-col gap-4">
+        <h4 class="text-2xl font-bold">MA DIMSA Mengirim 15 Santri untuk Program Mobi...</h4>
+        <a href="#" class="text-sm inline-flex items-center gap-1 leading-[150%]">
+        Lihat Detail
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+      </div>
+    </div>
+   </section>
+
   <!-- Section About -->
-  <section class="w-full px-30 py-25 bg-white">
-    <div class="flex flex-row justify-between mb-10 gap-[120px]">
-      <div class="flex flex-col justify-between gap-4">
+  <section class="w-full px-5 py-10 md:px-30 md:py-25 bg-white">
+    <div class="flex flex-col md:flex-row justify-between mb-10 gap-8 md:gap-[120px]">
+      <div class="flex flex-col justify-between gap-6">
         <p class="text-sm md:text-base text-gray-500 font-medium tracking-wide">Selayang Pandang</p>
 
         <!-- Foto -->
         <img src="@/assets/img/Foto-Berita193.png" alt="Ustadz"
-          class="max-w-[400px] rounded-md object-cover" />
+          class="w-full max-w-[400px] rounded-md object-cover" />
       </div>
 
       <!-- Right Side: Heading & Text -->
@@ -157,8 +175,25 @@
       </div>
     </div>
 
+    <!-- Mobile Jumlah Peserta Didik -->
+
+    <div class="md:hidden flex flex-col">
+      <div class="flex flex-row justify-between py-10 w-full items-center border-b-2 border-neutral-300">
+        <h2 class="text-[40px] font-bold text-informative">760</h2>
+        <p class="text-xl font-bold">Jumlah satri/peserta didik</p>
+      </div>
+      <div class="flex flex-row justify-between py-10 w-full items-center border-b-2 border-neutral-300">
+        <h2 class="text-[40px] font-bold text-neutral-500">34</h2>
+        <p class="text-xl font-medium text-neutral-500">Prestasi Akademik & Non Akademik</p>
+      </div>
+      <div class="flex flex-row justify-between py-10 w-full items-center border-b-2 border-neutral-300">
+        <h2 class="text-[40px] font-bold text-neutral-500">56</h2>
+        <p class="text-xl font-medium text-neutral-500">Tenaga Pendidik Berkualitas</p>
+      </div>
+    </div>
+
     <!-- Video -->
-    <div class="w-full relative pt-[80px]">
+    <div class="w-full relative py-8 md:pt-[80px]">
       <!-- Banner Background Image -->
       <img src="@/assets/img/cover.jpg" alt="Banner Dimsa" class="w-full rounded-md object-cover" />
 
@@ -174,14 +209,14 @@
   </section>
 
   <!-- Lembaga Akademik Section -->
-  <section class="bg-[#F9FAFB] py-[100px] px-4 sm:px-6 md:px-8 lg:px-[120px]">
+  <section class="bg-[#F9FAFB] md:py-[100px] px-5 md:px-8 md:px-[120px]">
     <p class="text-gray-500 text-sm font-medium mb-8">Lembaga Akademik</p>
 
-    <div class="grid md:grid-cols-2 gap-[80px]">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-[80px]">
       <!-- Card SMP -->
-      <div class="bg-white rounded-[20px] overflow-hidden">
-        <img src="@/assets/img/image1.jpg" alt="SMP" class="w-full h-[300px] object-cover" />
-        <div class="p-6">
+      <div class="bg-white rounded-lg md:rounded-2xl overflow-hidden">
+        <img src="@/assets/img/image1.jpg" alt="SMP" class="w-full md:h-[300px] object-cover" />
+        <div class="p-4 md:p-6">
           <span class="inline-block bg-[#2C3E50] text-white text-xs font-semibold px-6 py-2 rounded-md mb-2">
             SMP
           </span>
@@ -190,9 +225,9 @@
       </div>
 
       <!-- Card MA -->
-      <div class="bg-white rounded-[20px] overflow-hidden">
-        <img src="@/assets/img/image2.jpg" alt="MA" class="w-full h-[300px] object-cover" />
-        <div class="p-6">
+      <div class="bg-white rounded-lg md:rounded-2xl overflow-hidden">
+        <img src="@/assets/img/image2.jpg" alt="MA" class="w-full md:h-[300px] object-cover" />
+        <div class="p-4 md:p-6">
           <span class="inline-block bg-[#14532D] text-white text-xs font-semibold px-6 py-2 rounded-md mb-2">
             MA
           </span>
@@ -205,8 +240,8 @@
   <!-- Section: Kerjasama -->
 
   <section class="w-full bg-[#F9FAFB] py-[60px] overflow-hidden">
-    <div class="px-4 sm:px-6 md:px-8 lg:px-[120px] items-center mb-8">
-      <h2 class="text-[#1E2B4F] font-medium text-base mb-8">Kerjasama :</h2>
+    <div class="px-4 md:px-[100px] items-center mb-8">
+      <h2 class="text-neutral-700 font-medium text-base mb-8">Kerjasama :</h2>
     </div>
     <!-- Wrapper -->
     <div class="relative overflow-hidden bg-white py-8">
@@ -570,7 +605,7 @@
     </div>
   </footer>
 
-  <div class="fixed bottom-6 right-[80px] z-50 flex items-center justify-center p-2">
+  <div class="hidden md:fixed bottom-6 right-[80px] z-50 md:flex items-center justify-center p-2">
     <button @click="scrollToTop" class="bg-white shadow-2xl rounded-full w-[56px] h-[56px] hover:bg-gray-100"
       title="Back to Top">
       <div class="flex items-center justify-center w-full h-full">
@@ -584,6 +619,7 @@
         </svg>
       </div>
     </button>
+  </div>
   </div>
 </template>
 
