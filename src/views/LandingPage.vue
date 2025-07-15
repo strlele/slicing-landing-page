@@ -331,7 +331,7 @@ const scrollToTop = () => {
 
     <!-- Section: Kerjasama -->
 
-    <section class="w-full bg-[#F9FAFB] pt-6 pb-10 md:py-[60px] overflow-hidden">
+    <section class="w-full pt-6 pb-10 md:py-[60px] overflow-hidden">
       <div class="px-4 md:px-[100px] items-center mb-8">
         <h2 class="text-neutral-700 font-medium text-base mb-4 md:mb-8">Kerjasama :</h2>
       </div>
