@@ -12,6 +12,7 @@
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@tailwindcss/vite": "^4.1.11",
+    "axios": "^1.11.0",
     "flowbite": "^3.1.2",
     "pinia": "^3.0.3",
     "tailwindcss": "^4.1.11",

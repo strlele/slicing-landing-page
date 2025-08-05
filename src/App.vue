@@ -1,9 +1,4 @@
-<script setup>
-</script>
-
+<!-- src/App.vue -->
 <template>
-  <div>
-    <TheNavbar />
-      <RouterView />
-  </div>
+  <router-view />
 </template>
