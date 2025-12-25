@@ -33,7 +33,7 @@ import GurustaffPage from '@/views/pimpinan/GurustaffPage.vue'
 import PengasuhPage from '@/views/pimpinan/PengasuhPage.vue'
 import PimpinanPage from '@/views/pimpinan/PimpinanPage.vue'
 // CMS
-import SlideshowPage from '@/views/cms/SlideshowPage.vue'
+import SlideshowPage from '@/views/admin/SlideshowPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -55,12 +55,11 @@ const router = createRouter({
     // CMS
     // Slideshow
     {
-      path: '/Slideshow',
+      path: '/admin/slideshow',
       name: 'Slideshow',
-     
-      component: () => import('../views/cms/SlideshowPage.vue'),
-    },
 
+      component: () => import('../views/admin/SlideshowPage.vue'),
+    },
 
     // AKADEMIK DIMSA
     {
@@ -75,7 +74,7 @@ const router = createRouter({
     },
 
     // TENTANG KAMI
-     {
+    {
       path: '/ekstra',
       name: 'ekstrakurikuler',
       component: () => import('../views/EkstraPage.vue'),
@@ -161,7 +160,7 @@ const router = createRouter({
 
     // BERITA
     {
-      path: '/detail-berita',
+      path: '/detail-berita/:slug',
       name: 'Detail Berita',
       component: () => import('../views/berita/DetailPage.vue'),
     },
@@ -207,7 +206,6 @@ const router = createRouter({
       component: () => import('../views/berita/DataalumniPage.vue'),
     },
 
-    
     // PROGRAM AKADEMIK
     // Kurikulum
     {
@@ -216,8 +214,8 @@ const router = createRouter({
       component: ProgramPage,
       props: {
         title: 'Program Kurikulum',
-        image: '/src/assets/img/kurikulum.jpg'
-      }
+        image: '/src/assets/img/kurikulum.jpg',
+      },
     },
     // Tahfidz
     {
@@ -226,8 +224,8 @@ const router = createRouter({
       component: ProgramPage,
       props: {
         title: 'Program Tahfidz',
-        image: '/src/assets/img/tahfidz.jpg'
-      }
+        image: '/src/assets/img/tahfidz.jpg',
+      },
     },
     // Bahasa
     {
@@ -236,8 +234,8 @@ const router = createRouter({
       component: ProgramPage,
       props: {
         title: 'Program Bahasa',
-        image: '/src/assets/img/bahasa.jpg'
-      }
+        image: '/src/assets/img/bahasa.jpg',
+      },
     },
     // Unggulan
     {
@@ -246,11 +244,10 @@ const router = createRouter({
       component: ProgramPage,
       props: {
         title: 'Program Unggulan',
-        image: '/src/assets/img/program-it.jpg'
-      }
+        image: '/src/assets/img/program-it.jpg',
+      },
     },
   ],
-  
 })
 
 export default router
